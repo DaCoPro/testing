@@ -1,18 +1,17 @@
-const example = require('./example');
+const testExample = require('./example.test');
+const utilities  = require('./testUtils');
 
-const testFunctions = require('./testFunctions');
+const passes = [];
+const fails = [];
 
-function runTests () {
-    testAdd();
-    if (example.multiply(3,2) !== 6) {  
-        testFunctions.returnFail('main.multiply');
-    } else testFunctions.returnPass('main.multiply')
+console.log(testExample.runExampleTests())
+function runTestSuite () {
+    // example.testAdd();
+
+
 
 }
 
-function testAdd () {
-    if (example.add(1,2) !== 3) {  
-        testFunctions.returnFail('main.add');
-    } else testFunctions.returnPass('main.add')
-}
-runTests();
+
+
+runTestSuite();
